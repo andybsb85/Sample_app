@@ -1,6 +1,26 @@
-<h1>Sample App</h1>
-    <p>
-      This is the home page for the
-      <a href="http://railstutorial.org/">Ruby on Rails Tutorial</a>
-      sample application.
-    </p>
+<% provide(:title, 'Home') %>
+<div class="center hero-unit">
+  <h1><%=t :welcome %></h1>
+
+  <h2><%=t :hello_world %></h2>
+
+  <%= link_to t(:sign_up), '#', class: "btn btn-large btn-primary" %>
+</div>
+
+<p><%= flash[:notice] %></p>
+
+
+<div id="welcome">
+	<div class="wel">
+	<h2>PLACES TO VISIT</h2>
+	<%= link_to image_tag("ecu1.jpg", alt: "places"), id: "places" %>
+	 <%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary" %>
+	<p></p>
+	</div>
+</div>
+<div id="whats_on">
+	<div class="whats">
+	<h2><a href="">FOOD<a></h2>
+	<%= link_to image_tag("ecu2.jpg", alt: "food"), id: "food" %>
+	<p></p>
+</div>

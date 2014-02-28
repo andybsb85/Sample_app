@@ -1,5 +1,6 @@
 class StaticPagesController < ApplicationController
   def home
+  	 flash[:notice] = t(:hello_flash)
   end
 
   def help
@@ -7,4 +8,8 @@ class StaticPagesController < ApplicationController
 
    def about
   end
+
+   def contact
+  end
+
 end
