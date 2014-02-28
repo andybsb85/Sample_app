@@ -1,8 +1,8 @@
 SampleApp::Application.routes.draw do
-  get "users/new"
+ 
   #root :to => 'static_pages#home'
   get '/home' => 'static_pages#home'
-  get '/:locale' => 'static_pages#home'
+  get '/locale' => 'static_pages#home'
   get '/about' => 'static_pages#about'
   get '/help' => 'static_pages#help'
   get '/contact' => 'static_pages#contact'
