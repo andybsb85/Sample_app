@@ -1,12 +1,14 @@
 SampleApp::Application.routes.draw do
  
+  resources :users
   #root :to => 'static_pages#home'
   get '/home' => 'static_pages#home'
   get '/locale' => 'static_pages#home'
   get '/about' => 'static_pages#about'
   get '/help' => 'static_pages#help'
   get '/contact' => 'static_pages#contact'
-  get '/new' => 'users#new'
+ # get '/new' => 'users#new'
+  match '/new', to: 'users#new', via: 'get'
 
   scope "(:locale)", locale: /es|nl/ do
     resources :home
