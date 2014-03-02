@@ -1,6 +1,7 @@
 SampleApp::Application.routes.draw do
  
   resources :users
+  resources :session, only: [:new, :create, :destroy]
   #root :to => 'static_pages#home'
   get '/home' => 'static_pages#home'
   get '/locale' => 'static_pages#home'
@@ -9,6 +10,9 @@ SampleApp::Application.routes.draw do
   get '/contact' => 'static_pages#contact'
  # get '/new' => 'users#new'
   match '/new', to: 'users#new', via: 'get'
+  match '/signup', to: 'users#new', via: 'get'
+  match '/signin', to: 'session#new', via: 'get'
+  match '/signout', to: 'session#distroy', via: 'delete'
 
   scope "(:locale)", locale: /es|nl/ do
     resources :home
