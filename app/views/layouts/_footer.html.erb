@@ -1,12 +1,18 @@
 <footer class="footer">
-  <small>
-    <a href="">Ecuador Travel</a>
-    by Andrea Becerra
-  </small>
-  <nav>
-    <ul>
-      <li><%= link_to "About",   'about' %></li>
-      <li><%= link_to "Contact", 'contact'%></li>
-    </ul>
-  </nav>
-</footer>
+  <div class="large-12 columns">
+      <hr>
+
+      <div class="row">
+        <div class="large-4 columns">
+          <p><small><a href="">Ecuador Travel</a> by Andrea Becerra</small></p>
+        </div>
+        <div class="large-4 columns">
+          <p><%= link_to "About",   about_path %></p>
+        </div>
+
+        <div class="large-4 columns">
+          <p><%= link_to "Contact", contact_path %></p>
+        </div>
+      </div>
+    </div>
+  </footer>

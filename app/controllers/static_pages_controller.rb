@@ -1,9 +1,12 @@
 class StaticPagesController < ApplicationController
-  def home
-  	 flash[:notice] = t(:hello_flash)
+  def index
+   	 flash[:notice] = t(:hello_flash)
   end
 
   def help
+  end
+
+   def whats
   end
 
    def about
